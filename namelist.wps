@@ -1,0 +1,42 @@
+&share
+ wrf_core = 'ARW',
+ max_dom =1,
+ start_date = '2018-06-11_00:00:00',
+ end_date   = '2018-06-21_00:00:00',
+ interval_seconds = 21600,
+ io_form_geogrid=2,
+/
+
+&geogrid
+ parent_id         =   1, 
+ parent_grid_ratio =   1,  
+ i_parent_start    =   1, 
+ j_parent_start    =   1,
+ e_we              = 370,
+ e_sn              =  259,
+ geog_data_res = '10m',
+ dx = 9000,
+ dy = 9000,
+ map_proj = 'lambert',
+ ref_lat   =  16.4,
+ ref_lon   =  115,
+ truelat1  =  30,
+ truelat2  =60,
+ stand_lon = 114.5,
+ geog_data_path = '/share/data/WPS_GEOG/',
+ ref_x=185,
+ ref_y=128.5,
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix ='3D',
+/
+
+&metgrid
+ fg_name='3D','SFC',
+/
+
+
+
+
